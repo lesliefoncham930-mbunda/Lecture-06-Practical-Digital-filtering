@@ -140,6 +140,14 @@ Question 5. Describe one limitation of your experiments and one improvement you 
 One limitation of this experiment is that the artificial interference is generated using a fixed 50 Hz sine wave. Real electrical interference can vary in frequency and amplitude, and real sensor signals may contain additional noise sources.
 
 Another limitation is that filtfilt is an offline filtering method and cannot directly represent a continuously operating real-time system.
+6. Final conclusion for Part B
+The experiment demonstrated how a digital band-stop filter can reduce unwanted 50 Hz electrical interference in an audio recording. The built-in Handel recording was used as the original clean audio, and an artificial 50 Hz hum was added to create a controlled noisy signal.
+
+Two Butterworth band-stop filters were designed and tested. The first filter used a narrow stop band between 49 Hz and 51 Hz, while the second used a wider stop band between 45 Hz and 55 Hz.
+
+The experiment compared the waveforms, frequency spectra, hum attenuation and RMSE values. The narrow filter aims to remove the 50 Hz interference while preserving nearby audio frequencies. The wider filter can handle greater frequency variation but may also remove useful audio information.
+
+In conclusion, selecting an appropriate filter requires balancing noise reduction and preservation of the original signal. This is important in audio processing, sensor measurements and practical IoT applications.
 
 An improvement would be to implement an adaptive filtering system using a microcontroller such as an ESP32. The system could continuously collect sensor measurements, detect unwanted interference and adjust its filtering parameters.
 
